@@ -1,7 +1,14 @@
 import React, { createRef, FunctionComponent, useEffect } from 'react'
+import styled from '@emotion/styled'
 
 const src = 'https://utteranc.es/client.js'
-const repo = 'lcyljy.github.io/blog' // 자신 계정의 레포지토리로 설정
+const repo = 'lcyljy/blog.github.io' // 자신 계정의 레포지토리로 설정
+
+const UtterancesWrapper = styled.div`
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
+`
 
 type UtterancesAttributesType = {
   src: string
@@ -24,7 +31,7 @@ const CommentWidget: FunctionComponent = function () {
     const attributes: UtterancesAttributesType = {
       src,
       repo,
-      'issue-term': 'pathname',
+      'issue-term': "pathname",
       label: 'Comment',
       theme: `github-light`,
       crossorigin: 'anonymous',
@@ -38,7 +45,7 @@ const CommentWidget: FunctionComponent = function () {
     element.current.appendChild(utterances)
   }, [])
 
-  return <div ref={element} />
+  return <UtterancesWrapper ref={element} />
 }
 
 export default CommentWidget

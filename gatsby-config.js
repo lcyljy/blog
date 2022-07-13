@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `주니어 개발자 애한의 개발블로그`,
+    description: `매일 매일 조금씩 성장하는 주니어 개발자 애한의 기술 블로그입니다.`,
+    author: `Changyoung`,
+    siteUrl: `https://lcyljy.github.io/gatsbyblog` // 임시.
   },
   plugins: [
     {
@@ -13,6 +14,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-emotion`,
+    'gatsby-plugin-sitemap',
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -37,6 +39,12 @@ module.exports = {
           placeholder: 'blurred',
         }
       }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-image`,
@@ -77,6 +85,13 @@ module.exports = {
             },
           },
         ],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: 'https://lcyljy.github.io/gatsbyblog',
+        stripQueryString: true,
       },
     },
   ],
