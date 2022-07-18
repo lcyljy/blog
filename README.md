@@ -1,3 +1,9 @@
+## Intro
+
+제작기간 : 22.07.12 ~
+사용기술 : typescript, react, graphQL
+배포 : gatsby, netlify
+
 ## 개발 블로그 운영 이유
 
 ---
