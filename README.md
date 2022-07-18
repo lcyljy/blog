@@ -1,105 +1,50 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+## 개발 블로그 운영 이유
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+---
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
+### 안녕하세요.
 
-## 🚀 Quick start
+안녕하세요 저는 프론트엔드 개발자 애한입니다. 저는 기록을 중요시 여기고, 기록을 통해 보다 발전할 수 있다는 믿음이 있습니다. 때문에 15년여간 블로그를 운영해왔고 naverblog, oneNote, EverNote, 카카오톡 내게 쓰기 등 다양한 메모가 가능한 기능을 통해 제가 살아왔던 과거에 대해 기록하고 있습니다.
 
-1.  **Create a Gatsby site.**
+### 기존에 블로그가 있었지만...
 
-    Use the Gatsby CLI ([install instructions](https://www.gatsbyjs.com/docs/tutorial/part-0/#gatsby-cli)) to create a new site, specifying the default starter.
+기존에 운영하고 있었던 블로그가 있지만, 개발블로그가 아닌 다양한 주제에 대한 블로그를 운영하고있었다. 해당 블로그에서는 개발 외 일상에 대한 다양한 글들이 올라오기 때문에 면접관이 나에 대해 조금 더 알 수 있는 기회라고 생각해서 넣었지만 보다 개인적인 것들이 들춰지는 것 같아서 조심스러워 졌다. (해당 블로그를 이력서에 넣었더니 해당 블로그를 면접도중 면접관이 탐색했는데 이별했던 이야기 등(지극히 사적인 이야기)이 담겨져있었다.)
 
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+### 기존 블로그와 격리 필요
 
-1.  **Start developing.**
+때문에 기존 블로그와 격리된 개발을 위한, 나의 개발 지식을 정리하고 공부할 수 있는 블로그를 만드는 것이 필요했다.
+또한, 오로지 개발과 관련한 블로그를 위한 글쓰기 연습이 필요했다.
 
-    Navigate into your new site’s directory and start it up.
+개발과 관련하여, 혹은 한정하여 글쓰는 연습 필요.
 
-    ```shell
-    cd my-default-starter/
-    gatsby develop
-    ```
+---
 
-1.  **Open the source code and start editing!**
+## 블로그 개발 과정 안내
 
-    Your site is now running at `http://localhost:8000`!
+tistory, velog 등의 사이트를 이용할까 고민했습니다.
+하지만 프론트엔드 개발자가 되고자 하기 때문에 직접 개발하고 원하는 위치에 원하는 기능을 추가해보면서, 다른 서비스에 의존하지 않는 나만의 사이트를 만들어보고 싶었습니다.
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby Tutorial](https://www.gatsbyjs.com/docs/tutorial/part-4/#use-graphiql-to-explore-the-data-layer-and-write-graphql-queries)._
+하지만 맨땅에서 블로그를 만들어보고자 했으나 디자인적 감각이 부족함을 깨닫고 Gatsby를 통해 블로그를 만들어보고자 하였습니다.
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+Gatsby 공식문서만 이용해서 혼자 블로그를 제작하던 도중 일일기록을 멈추지 않기 위해 TIL repository를 생성하여 일일기록을 하였고, 이후 commit에 <a href="https://github.com/lcyljy/TIL">TIL</a>만 올리는 것이 바람직하지 않다고 생각되어, 기존에 꾸준히 이용하던 OneNote를 사용하여 기록하였습니다.
 
-## 🚀 Quick start (Gatsby Cloud)
+이후 Gatsby 공식문서와 <a href="https://www.inflearn.com/course/gatsby-%EA%B8%B0%EC%88%A0%EB%B8%94%EB%A1%9C%EA%B7%B8/dashboard"><주현도>의 React 기반 Gatsby로 기술 블로그 개발하기 강의</a>를 바탕으로 제작되었습니다.
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+_무료강의이고 텍스트로 이루어져 있어 중간중간 설명 혹은 코드가 누락된 부분이 많아 찾아가면서 공부해야 했습니다._
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-default)
+아직 강의의 모든 코드를 이해하진 못했으나, 기존의 강의를 바탕으로 조금씩 수정하며 이해해 가는 중
 
-## 🧐 What's inside?
+---
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+## 강의 완주 후 개발과정 안내
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+위 강의는 react를 이용하여 개발블로그를 만들어보자는 강의입니다. 해당 강의는 블로그의 틀을 만드는 과정까지만 소개되어있고, 해당 강의 내에서 안내한 인피니티 스크롤을 구현하거나 emotionjs 라이브러리를 사용하는 방법, GraphQL 등에 대해 등 다양한 것들을 배울 수 있었지만 내가 생각하는 블로그에 필요한 기능들이 부족하다고 생각되어졌다.
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+### 앞으로 추가할 것들
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
-
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
-
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
-
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
-
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/) for more detail).
-
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-
-9.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
-
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
-
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-12. **`README.md`**: A text file containing useful reference information about your project.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[Build, Deploy, and Host On The Only Cloud Built For Gatsby](https://www.gatsbyjs.com/products/cloud/)
-
-Gatsby Cloud is an end-to-end cloud platform specifically built for the Gatsby framework that combines a modern developer experience with an optimized, global edge network.
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+1.  우상단 Nav 추가
+2.  다크모드 기능 추가
+3.  footer 링크 추가
+4.  게시물(postItem) 단락 우측 상단에 고정(움직이는) 기능 추가
+5.  프로파일 이미지를 클릭했을 때 메인화면으로 들어가는 기능
+6.  기타...
