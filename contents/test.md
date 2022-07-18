@@ -23,6 +23,7 @@ develop branch에서 (feat) #1 branch를 생성하고, 마찬가지로 develop b
 확인합니다.
 
 음...
+
 feat branch 를 A branch라고 가정하고
 docs branch를 B branch라고 가정합니다.
 
@@ -32,3 +33,8 @@ a branch의 변경사항도 정상적으로 병합되고 b branch의 변경사�
 해당 사항을 해결하기 위해서...
 
 그 와중 inssue 하나 마크다운 파일에서 img태그를 닫지 않으면 제대로 작동하지 않네요.
+
+docs branch를 먼저 feat branch에 merge한후
+해당 feat branch를 다시 develop branch에 merge?
+
+다시 feat branch상태에서 docs를 수정해서 docs에 merge
