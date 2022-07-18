@@ -48,17 +48,27 @@ const Title = styled.div`
   }
 `
 
+const Nav = styled.div`
+  padding: 1rem;
+  font-size: 16px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+`
+
 const Introduction: FunctionComponent<IntroductionProps> = function ({
   profileImage,
 }) {
   return (
     <Background>
+      <Nav>이력서, naverblog, 깃헙, 다크모드</Nav>
       <Wrapper>
-        <ProfileImage profileImage={profileImage} />
+        <ProfileImage profileImage={profileImage} /> 
 
         <div>
-          <SubTitle>Nice to Meet You,</SubTitle>
-          <Title>I'm Junior Frontend Developer Changyoung Lee.</Title>
+          <SubTitle>안녕하세요</SubTitle>
+          <Title>저는 프론트엔드 개발자 애한입니다.</Title>
         </div>
       </Wrapper>
     </Background>
