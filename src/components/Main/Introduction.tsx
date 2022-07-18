@@ -2,6 +2,7 @@ import React, { FunctionComponent } from 'react'
 import styled from '@emotion/styled'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
 import ProfileImage from 'components/Main/ProfileImage'
+import {FaGithub, FaBloggerB} from 'react-icons/fa';
 
 type IntroductionProps = {
   profileImage: IGatsbyImageData
@@ -50,11 +51,16 @@ const Title = styled.div`
 
 const Nav = styled.div`
   padding: 1rem;
-  font-size: 16px;
+  font-size: 25px;
   display: flex;
   position: fixed;
   top: 0;
   right: 0;
+`
+
+const Icon = styled.div`
+  font-size: 25px;
+  
 `
 
 const Introduction: FunctionComponent<IntroductionProps> = function ({
@@ -62,7 +68,7 @@ const Introduction: FunctionComponent<IntroductionProps> = function ({
 }) {
   return (
     <Background>
-      <Nav>이력서, naverblog, 깃헙, 다크모드</Nav>
+      <Nav><Icon>이력서 | <FaBloggerB/> | <FaGithub/></Icon> | 다크모드</Nav>
       <Wrapper>
         <ProfileImage profileImage={profileImage} /> 
 
