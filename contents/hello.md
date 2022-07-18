@@ -8,6 +8,8 @@ thumbnail: './background2.png'
 
 ## 안녕하세요 매일매일 성장하는 Front-end Developer 애한입니다.
 
+내용이 삭제되었습니다.
+
 ##
 
 ---
