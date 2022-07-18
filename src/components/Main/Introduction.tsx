@@ -59,7 +59,13 @@ const Nav = styled.div`
 `
 
 const Icon = styled.div`
+  padding: 0 1rem;
   font-size: 25px;
+  transition: all 0.2s linear;
+&:hover{
+  
+  transform:scale(1.3);
+}
   
 `
 
@@ -68,7 +74,7 @@ const Introduction: FunctionComponent<IntroductionProps> = function ({
 }) {
   return (
     <Background>
-      <Nav><Icon>이력서 | <FaBloggerB/> | <FaGithub/></Icon> | 다크모드</Nav>
+      <Nav><Icon>이력서</Icon> | <Icon><a  href="https://blog.naver.com/lodin_love/222473733290" target='_blank'><FaBloggerB/></a></Icon> | <Icon><a  href="https://github.com/lcyljy"target='_blank'><FaGithub/></a ></Icon> | 다크모드</Nav>
       <Wrapper>
         <ProfileImage profileImage={profileImage} /> 
 
