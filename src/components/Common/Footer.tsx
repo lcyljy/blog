@@ -18,8 +18,8 @@ const FooterWrapper = styled.footer`
 const Footer: FunctionComponent = function () {
   return (
     <FooterWrapper>
-      Thank You for Visiting My Blog, Have a Good Day 😆
-      <br />© 2022 Developer ChangYoung Lee, Powered By Gatsby.
+      애한의 개발블로그에 오신 것을 환영합니다. 😆
+      <br />©2022 by 애한, All Page content is property of 애한, Powered By Gatsby.
     </FooterWrapper>
   )
 }

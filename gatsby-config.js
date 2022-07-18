@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `주니어 개발자 애한의 개발블로그`,
+    title: `애한의 개발블로그`,
     description: `매일 매일 조금씩 성장하는 주니어 개발자 애한의 기술 블로그입니다.`,
     author: `Changyoung`,
     siteUrl: `https://lcyljy.github.io/gatsbyblog` // 임시.
