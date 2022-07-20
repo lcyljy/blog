@@ -13,6 +13,7 @@ thumbnail: './background2.png'
 
 강의를 따라 들으면서 개발블로그를 만들긴 했지만. 정작 블로그의 코드 내용에 대해서 제대로 이해를 하고 있지 못하고 있다는 생각이 든 이틀이었다.
 다크모드 구현을 위해
+
 https://letsbuildui.dev/articles/building-a-dark-mode-theme-toggle
 
 위 사이트를 참조했다. 위 사이트의 코드를 시도하기 전에 보다 많은 사이트들을 돌아다니고 찾아보았지만. 가장 깔끔하게 구현되어있다고 생각했고, 이를 시도했다.
@@ -27,6 +28,7 @@ https://letsbuildui.dev/articles/building-a-dark-mode-theme-toggle
    -> emotionjs라이브러리를 사용해본 것은 이 강의를 들으면서 처음이었고, 때문에 해당 라이브러리를 사용해서 코드를 짜는 것이 익숙치 않았다.
    여러 블로그들을 돌아다니며 해당 코드를 어떻게 짜야하는지 고민해보다가 아예 다 뒤집어엎고 순수 javascript로 코드를 짜고싶다는 욕망도 들었지만... 할 수 있는데까지 해보고싶었다.
    여러 블로그들을 참고했지만, 가장 기억에 남았고 북마크해놓은 블로그는 다음과 같다.
+
    https://yceffort.kr/2020/10/style-with-styled-components
 
 ---
@@ -44,9 +46,10 @@ common 폴더의 globalstyle에서 전역 스타일 설정이 있어 해당 부�
 
 기존의 파일경로를 처음에는 Introduction 에서 넣었는데 해당 위치에 코드를 삽입하면 메인페이지에서만 보이고 포스트에 들어가면 보이지 않는 현상이 있음을 깨닫고 모든 페이지에 적용되는 Template 파일에 해당 코드를 옮겼다...
 
-하지만 여전히 동작하지 않는다... 원인이 뭘까... 코드를 다시 처음부터 읽고 있다. 내일을 해결되었으면...
+하지만 여전히 동작하지 않는다... 원인이 뭘까... 코드를 다시 처음부터 읽고 있다. 내일은 해결되었으면...
 
 ## Source
 
 https://letsbuildui.dev/articles/building-a-dark-mode-theme-toggle
+
 https://yceffort.kr/2020/10/style-with-styled-components
