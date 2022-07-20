@@ -3,6 +3,8 @@ import styled from '@emotion/styled'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
 import ProfileImage from 'components/Main/ProfileImage'
 import {FaGithub, FaBloggerB} from 'react-icons/fa';
+import DarkModeToggle from 'hooks/DarkModeToggle';
+
 
 type IntroductionProps = {
   profileImage: IGatsbyImageData
@@ -74,7 +76,7 @@ const Introduction: FunctionComponent<IntroductionProps> = function ({
 }) {
   return (
     <Background>
-      <Nav><Icon>이력서</Icon> | <Icon><a  href="https://blog.naver.com/lodin_love/222473733290" target='_blank'><FaBloggerB/></a></Icon> | <Icon><a  href="https://github.com/lcyljy"target='_blank'><FaGithub/></a ></Icon> | 다크모드</Nav>
+      
       <Wrapper>
         <ProfileImage profileImage={profileImage} /> 
 
