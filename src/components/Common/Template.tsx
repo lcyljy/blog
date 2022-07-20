@@ -3,6 +3,8 @@ import styled from '@emotion/styled'
 import GlobalStyle from 'components/Common/GlobalStyle'
 import Footer from 'components/Common/Footer'
 import { Helmet } from 'react-helmet'
+import {FaGithub, FaBloggerB} from 'react-icons/fa';
+import DarkModeToggle from 'hooks/DarkModeToggle';
 
 type TemplateProps = {
   title: string
@@ -16,7 +18,28 @@ const Container = styled.main`
   display: flex;
   flex-direction: column;
   height: 100%;
+
 `
+const Nav = styled.div`
+  padding: 1rem;
+  font-size: 25px;
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #ffffff;
+`
+
+const Icon = styled.div`
+  padding: 0 1rem;
+  font-size: 25px;
+  transition: all 0.2s linear;
+&:hover{
+  
+  transform:scale(1.3);
+}
+`
+
 
 const Template: FunctionComponent<TemplateProps> = function ({
   title,
@@ -27,6 +50,7 @@ const Template: FunctionComponent<TemplateProps> = function ({
 }) {
   return (
     <Container>
+      
       <Helmet>
         <title>{title}</title>
 
@@ -50,10 +74,12 @@ const Template: FunctionComponent<TemplateProps> = function ({
 
         <html lang="ko" />
       </Helmet>
-
+      <Nav><Icon>이력서</Icon> | <Icon><a  href="https://blog.naver.com/lodin_love/222473733290" target='_blank'><FaBloggerB/></a></Icon> | <Icon><a  href="https://github.com/lcyljy"target='_blank'><FaGithub/></a ></Icon> </Nav>
       <GlobalStyle />
+      <DarkModeToggle />
       {children}
       <Footer />
+ 
     </Container>
   )
 }
