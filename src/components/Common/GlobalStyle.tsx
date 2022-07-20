@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import { Global, css } from '@emotion/react'
+import { Global, css} from '@emotion/react'
 
 const defaultStyle = css`
   @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
@@ -9,12 +9,24 @@ const defaultStyle = css`
     margin: 0;
     box-sizing: border-box;
     font-family: 'Nanum Myeongjo', serif;
+
+  }
+  :root[color-theme='light'] {
+  --background: #fff;
+  --boxColor: #333333;
+  } 
+
+  :root[color-theme='dark'] {
+  --background: #333333;
+  --boxColor: #fff;
   }
 
   html,
   body,
   #___gatsby {
     height: 100%;
+    background: var(--background);
+    color: var(--boxColor);
   }
 
   a,
@@ -24,6 +36,7 @@ const defaultStyle = css`
     cursor: pointer;
   }
 `
+
 
 const GlobalStyle: FunctionComponent = function () {
   return <Global styles={defaultStyle} />

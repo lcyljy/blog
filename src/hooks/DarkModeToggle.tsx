@@ -3,9 +3,13 @@ import styled from '@emotion/styled'
 import MoonIcon from "../../static/assets/moon-svgrepo-com.svg";
 import SunIcon from "../../static/assets/sun-svgrepo-com.svg";
 
-const updateTheme = () => {
+const updateTheme = (isDarkEnabled:boolean) => {
  console.log("todo change theme")
-
+ if (isDarkEnabled) {
+  document.documentElement.setAttribute('color-theme', 'dark');
+} else {
+  document.documentElement.setAttribute('color-theme', 'light');
+}
 };
 
 interface toggle {
@@ -33,15 +37,13 @@ const ToggleWrapper = styled.label`
 `
 
 const Toggle = styled.div<toggle>`
-  background: var(--foreground);
-	transition: background var(--transition);
   height: 65px;
   width: 130px;
   background: var(--black);
   border-radius: 40px;
   padding: 12px;
   position: relative;
-  margin: auto; // Optional to center the toggle
+  margin: auto; 
   cursor: pointer;
   
 
@@ -89,7 +91,7 @@ const Icons = styled.div`
 
 const Img = styled.img`
   
-  fill: var(--background);
+  fill: var(--white);
   font-size: 14px;
   height: 30px;
   width: 30px;
