@@ -1,16 +1,7 @@
-import {FunctionComponent, useState, useEffect} from 'react'
+import { FunctionComponent, useState, useEffect, useCallback} from 'react'
 import styled from '@emotion/styled'
 import MoonIcon from "../../static/assets/moon-svgrepo-com.svg";
 import SunIcon from "../../static/assets/sun-svgrepo-com.svg";
-
-const updateTheme = (isDarkEnabled:boolean) => {
- console.log("todo change theme")
- if (isDarkEnabled) {
-  document.documentElement.setAttribute('color-theme', 'dark');
-} else {
-  document.documentElement.setAttribute('color-theme', 'light');
-}
-};
 
 interface toggle {
   toggle: boolean;
@@ -101,17 +92,45 @@ const Img = styled.img`
 `
 
 
-const DarkModeToggle: FunctionComponent = () => {
+const DarkModeToggle: FunctionComponent = ({ changeTheme }:any) => {
   
   const [isEnabled, setIsEnabled] = useState(false);
 
-  useEffect(() => {
-    updateTheme(isEnabled)
-  }, [isEnabled]);
+  const setDark = useCallback(() => {
+    localStorage.setItem("theme", "Dark");
+    document.documentElement.setAttribute("data-theme", "Dark");
+    if (changeTheme !== undefined) changeTheme();
+  }, [changeTheme]);
 
-  const toggleState = () => {
+  const setLight = () => {
+    localStorage.setItem("theme", "Light");
+    document.documentElement.setAttribute("data-theme", "Light");
+    if (changeTheme !== undefined) changeTheme();
+  };
+
+  const storedTheme = localStorage.getItem("theme");
+
+  const prefersDark =
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: Dark)").matches;
+
+  const defaultDark =
+    storedTheme === "Dark" || (storedTheme === null && prefersDark);
+
+  const toggleState = (e:any) => {
+    if (e.target.checked) {
+      setDark();
+    } else {
+      setLight();
+    }
     setIsEnabled((prevState) => !prevState);
   };
+
+  useEffect(() => {
+    if (defaultDark) {
+      setDark();
+    }
+  }, [defaultDark, setDark]);
 
   return (
   <Root>
@@ -128,8 +147,8 @@ const DarkModeToggle: FunctionComponent = () => {
         id="toggle"
         name="toggle"
         type="checkbox"
-        checked={isEnabled}
         onClick={toggleState}
+        defaultChecked={defaultDark}
       />
       </Toggle>
     </ToggleWrapper>
