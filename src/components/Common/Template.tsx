@@ -74,12 +74,12 @@ const Template: FunctionComponent<TemplateProps> = function ({
 
         <html lang="ko" />
       </Helmet>
-      <Nav><Icon>이력서</Icon> | <Icon><a  href="https://blog.naver.com/lodin_love/222473733290" target='_blank'><FaBloggerB/></a></Icon> | <Icon><a  href="https://github.com/lcyljy"target='_blank'><FaGithub/></a ></Icon> </Nav>
+      <Nav> <Icon>이력서</Icon> | <Icon><a  href="https://blog.naver.com/lodin_love/222473733290" target='_blank'><FaBloggerB/></a></Icon> | <Icon><a  href="https://github.com/lcyljy"target='_blank'><FaGithub/></a ></Icon> </Nav>
       <GlobalStyle />
       <DarkModeToggle />
       {children}
       <Footer />
- 
+      
     </Container>
   )
 }
