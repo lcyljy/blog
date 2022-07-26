@@ -3,6 +3,8 @@ import styled from '@emotion/styled'
 import MoonIcon from "../../static/assets/moon-svgrepo-com.svg";
 import SunIcon from "../../static/assets/sun-svgrepo-com.svg";
 
+
+
 interface toggle {
   toggle: boolean;
 }
@@ -90,10 +92,12 @@ const Img = styled.img`
   border-radius: 50%;
   z-index: 0;
 `
-
+const isBrowser = typeof window !== "undefined"
 
 const DarkModeToggle: FunctionComponent = ({ changeTheme }:any) => {
-  
+  if(isBrowser) {
+
+ 
   const [isEnabled, setIsEnabled] = useState(false);
 
   const setDark = useCallback(() => {
@@ -109,10 +113,10 @@ const DarkModeToggle: FunctionComponent = ({ changeTheme }:any) => {
   };
 
   const storedTheme = localStorage.getItem("theme");
-
+  
   const prefersDark =
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: Dark)").matches;
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: Dark)").matches
 
   const defaultDark =
     storedTheme === "Dark" || (storedTheme === null && prefersDark);
@@ -128,7 +132,7 @@ const DarkModeToggle: FunctionComponent = ({ changeTheme }:any) => {
 
   useEffect(() => {
     if (defaultDark) {
-      setDark();
+    setDark();
     }
   }, [defaultDark, setDark]);
 
@@ -155,6 +159,7 @@ const DarkModeToggle: FunctionComponent = ({ changeTheme }:any) => {
   </Root>
 
 );
+}
 }
 
 export default DarkModeToggle;
